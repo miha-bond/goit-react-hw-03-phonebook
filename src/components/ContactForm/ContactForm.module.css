@@ -1,0 +1,27 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.nameInput {
+  margin-left: 10px;
+  font-family: 'Comfortaa';
+}
+.phoneInput {
+  margin-left: 10px;
+  font-family: 'Comfortaa';
+}
+.btnSubmit {
+  width: 125px;
+  padding: 5px;
+
+  font-family: 'Comfortaa';
+  border-radius: 7px;
+  background-color: wheat;
+}
+
+.btnSubmit:hover,
+.btnSubmit:focus {
+  background-color: black;
+  color: wheat;
+}

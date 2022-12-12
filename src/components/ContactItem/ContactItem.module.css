@@ -1,0 +1,24 @@
+.contactItem {
+  display: flex;
+  align-items: center;
+  height: 25px;
+}
+.contactName {
+  margin-right: 10px;
+}
+.contactNumber {
+  margin-right: 10px;
+}
+.contactBtnDelete {
+  width: 100px;
+  height: 25px;
+  font-family: 'Comfortaa';
+  border-radius: 7px;
+  background-color: wheat;
+}
+
+.contactBtnDelete:hover,
+.contactBtnDelete:focus {
+  background-color: black;
+  color: wheat;
+}
