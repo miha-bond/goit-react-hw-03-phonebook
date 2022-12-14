@@ -52,14 +52,15 @@ class App extends React.Component {
   handleFilterChange = evt => {
     this.setState({ filter: evt.target.value });
   };
+  getFilteredContact = () => {
+    const { contacts, filter } = this.state;
+    const normalizedFilter = filter.toLowerCase();
+    return contacts.filter(({ name }) =>
+      name.toLowerCase().includes(normalizedFilter)
+    );
+  };
 
   render() {
-    const loweredFilter = this.state.filter.toLowerCase();
-
-    const filterContacts = this.state.contacts.filter(contact => {
-      return contact.name.toLowerCase().includes(loweredFilter);
-    });
-
     return (
       <div style={{ padding: '20px', marginLeft: '15px' }}>
         <h1>Phonebook</h1>
@@ -70,7 +71,7 @@ class App extends React.Component {
         <h2>Contacts</h2>
         <Filter value={this.state.filter} onChange={this.handleFilterChange} />
         <ContactList
-          contacts={filterContacts}
+          contacts={this.getFilteredContact}
           onDeleteContact={this.deleteContact}
         />
       </div>
