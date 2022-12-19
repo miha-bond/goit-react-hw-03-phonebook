@@ -70,7 +70,7 @@ class App extends React.Component {
           contacts={this.state.contacts}
         />
         <h2>Contacts</h2>
-        <Filter value={this.state.filter} onChange={this.ilterContacts} />
+        <Filter value={this.state.filter} onChange={this.handleFilterChange} />
         <ContactList
           contacts={this.getDataForRenderList()}
           onDeleteContact={this.deleteContact}
